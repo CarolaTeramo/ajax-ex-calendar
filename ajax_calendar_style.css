@@ -1,0 +1,30 @@
+body{
+  height: 100vh;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.bottoni{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid red;
+}
+.mese_visualizzato{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid green;
+}
+li {
+  font-size: 20px;
+}

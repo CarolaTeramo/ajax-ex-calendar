@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" type="text/javascript"></script>
+    <!-- moment -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <!-- foglio di stile css -->
+    <link rel="stylesheet" href="ajax_calendar_style.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="bottoni">
+        <button type="button" name="button">Precedente</button>
+        <button type="button" name="button">Successivo</button>
+      </div>
+
+      <div class="mese_visualizzato">
+        <h1 id="mese_corrente">Gennaio</h1>
+        <ul id="calendario">
+          <li></li>
+        </ul>
+      </div>
+
+
+
+    </div>
+
+    <!-- script handlebars -->
+    <script id="entry-template" type="text/x-handlebars-template">
+
+      <div class="mese_template">
+        <div class="cont_mesi">
+          <ul id="prova">
+            <li class="x"></li>
+          </ul>
+        </div>
+        <h1 id="mese_corrente">Gennaio</h1>
+        <ul id="calendario">
+
+        </ul>
+      </div>
+
+    </script>
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- foglio java -->
+    <script src="ajax_calendar_main.js"></script>
+  </body>
+</html>
