@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
   // //uso handlebars
   var template_html = $('#entry-template').html();
   var template_function = Handlebars.compile(template_html);
@@ -8,42 +9,56 @@ $(document).ready(function(){
   var moment_data = moment(data);
   //console.log(moment_data);
 
-  // ciclo esterno che itera su tutti i mesi
+  contomese = 0;
 
-  for (var i = 0; i < 12; i++) {
-    //tutti i mesi
-    var tutti_mesi = moment_data.month(i).format('MM');
-    //console.log(tutti_mesi);
-    //creo contenitore per tutti i mesi
+  $('.bt_dx').click(function() {
 
+    contomese++;
+    console.log(contomese);
 
-    var mese_scelto = tutti_mesi[i];
-    //data-indice="0"
+    //console.log(cliccato);
+    for (var i = 0; i < 12; i++) {
+      //tutti i mesi
+      var tutti_mesi = moment_data.month(i).format('MM');
+      //console.log(tutti_mesi);
+      //console.log(mese);
+      //creo contenitore per tutti i mesi
 
-    var giorni = moment_data.month(i).daysInMonth();
-    //console.log(giorni);
-    // ciclo interno sui giorni
-
-    for (var j = 0; j < giorni; j++) {
-      //var giorni_mese_i = mese_scelto[0]
-      var giorni_del_mese =  j;
-      //console.log(j);
-      if (i === 1 ){
-        j ===1;
-        console.log(j+1);
-      }
-      //$(.mese_visualizzato).append
+      mese_corrente = moment_data.month(i).format('MMMM');
+      var tutti = moment_data.month(i).daysInMonth();
+      //console.log(tutti); 31 28 30...
     }
 
 
+    var days = [];
+    //stampa dei giorni per singolo mese
+    for (var j = 0; j < tutti; j++) {
+      //var giorni_mese_i = mese_scelto[0]
+      //x.push(j);
+      //console.log(j);
+      //var giorni = j;
+      //console.log(giorni);
+      //$('.calendario').append(j);
+      days.push(j+1)
+    }
 
-    // var html_finale = template_function(variabile_hldbar);
-    // appendo questo var all id che è nell'html
-    //$('.').append(html_finale);
-    // aggiungo l'attributo che indica l'indice mese
-    //tutti_mesi.attr('data-conversazione', i);
+    //costruisco un oggetto mese
+    var variabile_hldbar = {
+      'attributo': i ,
+      'mese': mese_corrente,
+      'giorno': days,
+    }
+    console.log(variabile_hldbar);
 
-  }
+    var html_finale = template_function(variabile_hldbar);
+    //appendo questo var all id che è nell'html
+    $('.mese_visualizzato').html(html_finale);
+    //fine click
+  });
+
+
+
+
 
 
 

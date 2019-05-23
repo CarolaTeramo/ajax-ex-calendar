@@ -19,15 +19,13 @@
 
     <div class="container">
       <div class="bottoni">
-        <button type="button" name="button">Precedente</button>
-        <button type="button" name="button">Successivo</button>
+        <button class="bt_sx" type="button" name="button">Precedente</button>
+        <button class="bt_dx"type="button" name="button">Successivo</button>
       </div>
 
       <div class="mese_visualizzato">
-        <h1 id="mese_corrente">Gennaio</h1>
-        <ul id="calendario">
-          <li></li>
-        </ul>
+        <h1 id="mese_corrente">clicca e scopri mese successivo</h1>
+        <span></span>
       </div>
 
 
@@ -39,14 +37,12 @@
 
       <div class="mese_template">
         <div class="cont_mesi">
-          <ul id="prova">
-            <li class="x"></li>
+          <h1 id="mese_corrente">{{mese}}</h1>
+          <ul>
+            <li class="calendario" data-indice="{{attributo}}">{{giorno}}</li>
           </ul>
         </div>
-        <h1 id="mese_corrente">Gennaio</h1>
-        <ul id="calendario">
 
-        </ul>
       </div>
 
     </script>
