@@ -15,40 +15,44 @@ $(document).ready(function(){
 
     contomese++;
     console.log(contomese);
-    var i = contomese;
 
-    var tutti_mesi = moment_data.month(i-1).format('MM');
-    //console.log(tutti_mesi);
-    //console.log(mese);
-    //creo contenitore per tutti i mesi
+    if (contomese >= 13 === false){
+      var i = contomese;
 
-    mese_corrente = moment_data.month(i-1).format('MMMM');
-    var tutti = moment_data.month(i-1).daysInMonth();
-    //console.log(tutti); 31 28 30...
+      var tutti_mesi = moment_data.month(i-1).format('MM');
+      //console.log(tutti_mesi);
+      //console.log(mese);
+      //creo contenitore per tutti i mesi
 
-    var days = [];
-    //stampa dei giorni per singolo mese
-    for (var j = 0; j < tutti; j++) {
-      //var giorni_mese_i = mese_scelto[0]
-      //x.push(j);
-      //console.log(j);
-      //var giorni = j;
-      //console.log(giorni);
-      //$('.calendario').append(j);
-      days.push(j+1)
+      mese_corrente = moment_data.month(i-1).format('MMMM');
+      var tutti = moment_data.month(i-1).daysInMonth();
+      //console.log(tutti); 31 28 30...
+
+      var days = [];
+      //stampa dei giorni per singolo mese
+      for (var j = 0; j < tutti; j++) {
+        //var giorni_mese_i = mese_scelto[0]
+        //x.push(j);
+        //console.log(j);
+        //var giorni = j;
+        //console.log(giorni);
+        //$('.calendario').append(j);
+        days.push(j+1)
+      }
+
+      //costruisco un oggetto mese
+      var variabile_hldbar = {
+        'attributo': i ,
+        'mese': mese_corrente,
+        'giorno': days,
+      }
+      console.log(variabile_hldbar);
+
+      var html_finale = template_function(variabile_hldbar);
+      //appendo questo var all id che è nell'html
+      $('.mese_visualizzato').html(html_finale);
     }
 
-    //costruisco un oggetto mese
-    var variabile_hldbar = {
-      'attributo': i ,
-      'mese': mese_corrente,
-      'giorno': days,
-    }
-    console.log(variabile_hldbar);
-
-    var html_finale = template_function(variabile_hldbar);
-    //appendo questo var all id che è nell'html
-    $('.mese_visualizzato').html(html_finale);
     //fine click
   });
 
