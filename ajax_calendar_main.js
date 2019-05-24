@@ -11,24 +11,34 @@ $(document).ready(function(){
 
   contomese = 0;
 
+
   $('.bt_dx').click(function() {
 
     contomese++;
     console.log(contomese);
-
+    var i = contomese;
     //console.log(cliccato);
-    for (var i = 0; i < 12; i++) {
-      //tutti i mesi
-      var tutti_mesi = moment_data.month(i).format('MM');
-      //console.log(tutti_mesi);
-      //console.log(mese);
-      //creo contenitore per tutti i mesi
+    // for (var i = contomese; i < contomese; i++) {
+    //   //tutti i mesi
+    //   //var i = 0; i < 12; i++
+    //   var tutti_mesi = moment_data.month(i).format('MM');
+    //   //console.log(tutti_mesi);
+    //   //console.log(mese);
+    //   //creo contenitore per tutti i mesi
+    //
+    //   mese_corrente = moment_data.month(i).format('MMMM');
+    //   var tutti = moment_data.month(i).daysInMonth();
+    //   //console.log(tutti); 31 28 30...
+    // }
 
-      mese_corrente = moment_data.month(i).format('MMMM');
-      var tutti = moment_data.month(i).daysInMonth();
-      //console.log(tutti); 31 28 30...
-    }
+    var tutti_mesi = moment_data.month(i).format('MM');
+    //console.log(tutti_mesi);
+    //console.log(mese);
+    //creo contenitore per tutti i mesi
 
+    mese_corrente = moment_data.month(i).format('MMMM');
+    var tutti = moment_data.month(i).daysInMonth();
+    //console.log(tutti); 31 28 30...
 
     var days = [];
     //stampa dei giorni per singolo mese
