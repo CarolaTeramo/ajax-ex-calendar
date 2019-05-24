@@ -31,13 +31,13 @@ $(document).ready(function(){
     //   //console.log(tutti); 31 28 30...
     // }
 
-    var tutti_mesi = moment_data.month(i).format('MM');
+    var tutti_mesi = moment_data.month(i-1).format('MM');
     //console.log(tutti_mesi);
     //console.log(mese);
     //creo contenitore per tutti i mesi
 
-    mese_corrente = moment_data.month(i).format('MMMM');
-    var tutti = moment_data.month(i).daysInMonth();
+    mese_corrente = moment_data.month(i-1).format('MMMM');
+    var tutti = moment_data.month(i-1).daysInMonth();
     //console.log(tutti); 31 28 30...
 
     var days = [];
