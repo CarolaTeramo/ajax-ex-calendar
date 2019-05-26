@@ -6,7 +6,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 90%;
+  height: auto;
   margin: 0 auto;
   border: 1px solid black;
 }
@@ -26,5 +26,8 @@ body{
   border: 1px solid green;
 }
 li {
-  font-size: 20px;
+  font-size: 10px;
+}
+.rosso{
+  color: red;
 }

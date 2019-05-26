@@ -22,22 +22,26 @@
         <button class="bt_sx" type="button" name="button">Precedente</button>
         <button class="bt_dx"type="button" name="button">Successivo</button>
       </div>
+      <span></span>
 
       <div class="mese_visualizzato">
-        <h1 id="mese_corrente">clicca e scopri mese successivo</h1>
-        <span></span>
+        <h1 id="mese_corrente">January</h1>
+        <ul id="calendario" data-indice="{{attributo}}">
+        </ul>
       </div>
-
-
-
     </div>
-
     <!-- script handlebars -->
     <script id="entry-template" type="text/x-handlebars-template">
 
+      <li class="elenco_giorni" data-indice="{{format_giorno}}">{{giorno}}<span class="nome_festa"></span></li>
+
+    </script>
+
+    <!-- <script id="entry-template1" type="text/x-handlebars-template">
+
       <div class="mese_template">
         <div class="cont_mesi">
-          <h1 id="mese_corrente">{{mese}}</h1>
+          <h1 id="mese_corrente">{{mese}} 2018</h1>
           <ul>
             <li class="calendario" data-indice="{{attributo}}">{{giorno}}</li>
           </ul>
@@ -45,9 +49,7 @@
 
       </div>
 
-    </script>
-
-
+    </script> -->
 
 
 
